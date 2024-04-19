@@ -9,7 +9,7 @@ export const getSavingsController = (req: Request, res: Response) => {
   try {
     const savings = getSavingsService();
     res.send({ status: "OK", data: savings });
-  } catch (error) {
+  } catch (error: any) {
     res
       .status(error?.status || 500)
       .send({ status: "FAILED", data: { error: error?.message || error } });
@@ -20,7 +20,7 @@ export const getAllSharesController = (req: Request, res: Response) => {
   try {
     const allShares = getAllSharesService();
     res.send({ status: "OK", data: allShares });
-  } catch (error) {
+  } catch (error: any) {
     res
       .status(error?.status || 500)
       .send({ status: "FAILED", data: { error: error?.message || error } });
@@ -50,7 +50,7 @@ export const getShareController = (req: Request, res: Response) => {
     }
 
     res.send({ status: "OK", data: share });
-  } catch (error) {
+  } catch (error: any) {
     res
       .status(error?.status || 500)
       .send({ status: "FAILED", data: { error: error?.message || error } });
