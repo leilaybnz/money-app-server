@@ -8,7 +8,7 @@ export const getAllShares = () => {
   return db.savingsAccount.shares;
 };
 
-export const getShare = (shareName) => {
+export const getShare = (shareName: string) => {
   const share = db.savingsAccount.shares.find(
     (share) => share.name === shareName
   );
