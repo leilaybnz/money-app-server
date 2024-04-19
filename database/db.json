@@ -1,8 +1,6 @@
 {
   "savingsAccount": {
-    "ars": {
-      "amount": 200000
-    },
+    "cash": [{ "name": "ARS", "amount": 20000 }],
     "shares": [
       {
         "name": "coca-cola",
