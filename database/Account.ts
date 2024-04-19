@@ -1,7 +1,7 @@
 import db from "./db.json";
 
 export const getSavings = () => {
-  return db.savingsAccount.ars;
+  return db.savingsAccount.cash;
 };
 
 export const getAllShares = () => {
