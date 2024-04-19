@@ -1,0 +1,37 @@
+{
+  "savingsAccount": {
+    "ars": {
+      "amount": 200000
+    },
+    "shares": [
+      {
+        "name": "coca-cola",
+        "value": 90,
+        "totalShares": 1000,
+        "myShares": 200,
+        "cotizationDate": "2024-18-04 22:37:00"
+      },
+      {
+        "name": "apple",
+        "value": 90,
+        "totalShares": 1000,
+        "myShares": 200,
+        "cotizationDate": "2024-18-04 22:37:00"
+      },
+      {
+        "name": "A23",
+        "value": 90,
+        "totalShares": 1000,
+        "myShares": 200,
+        "cotizationDate": "2024-18-04 22:37:00"
+      },
+      {
+        "name": "A40",
+        "value": 90,
+        "totalShares": 1000,
+        "myShares": 200,
+        "cotizationDate": "2024-18-04 22:37:00"
+      }
+    ]
+  }
+}
