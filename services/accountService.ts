@@ -1,4 +1,4 @@
-import { getSavings, getAllShares } from "../database/Account";
+import { getSavings, getAllShares, getShare } from "../database/Account";
 
 export const getSavingsService = () => {
   const savings = getSavings();
@@ -8,4 +8,9 @@ export const getSavingsService = () => {
 export const getAllSharesService = () => {
   const allShares = getAllShares();
   return allShares;
+};
+
+export const getShareService = (shareName) => {
+  const share = getShare(shareName);
+  return share;
 };
