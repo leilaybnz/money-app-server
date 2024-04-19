@@ -10,7 +10,7 @@ export const getAllSharesService = () => {
   return allShares;
 };
 
-export const getShareService = (shareName) => {
+export const getShareService = (shareName: string) => {
   const share = getShare(shareName);
   return share;
 };
