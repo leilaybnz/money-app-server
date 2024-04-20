@@ -1,33 +1,37 @@
 {
   "savingsAccount": {
-    "cash": [{ "name": "ARS", "amount": 20000 }],
+    "cash": [{ "currency": "AR$", "amount": 2000000 }],
     "shares": [
       {
-        "name": "coca-cola",
-        "value": 90,
+        "name": "Coca-Cola",
+        "currency": "AR$",
+        "price": 90,
         "totalShares": 1000,
-        "myShares": 200,
+        "quantityOwned": 200,
         "cotizationDate": "2024-18-04 22:37:00"
       },
       {
-        "name": "apple",
-        "value": 90,
+        "name": "Apple",
+        "currency": "AR$",
+        "price": 90,
         "totalShares": 1000,
-        "myShares": 200,
+        "quantityOwned": 200,
         "cotizationDate": "2024-18-04 22:37:00"
       },
       {
         "name": "A23",
-        "value": 90,
+        "currency": "AR$",
+        "price": 90,
         "totalShares": 1000,
-        "myShares": 200,
+        "quantityOwned": 200,
         "cotizationDate": "2024-18-04 22:37:00"
       },
       {
         "name": "A40",
-        "value": 90,
+        "currency": "AR$",
+        "price": 90,
         "totalShares": 1000,
-        "myShares": 200,
+        "quantityOwned": 200,
         "cotizationDate": "2024-18-04 22:37:00"
       }
     ]
