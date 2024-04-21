@@ -3,35 +3,35 @@
     "cash": [{ "currency": "AR$", "amount": 2000000 }],
     "shares": [
       {
-        "name": "Coca-Cola",
+        "name": "Acciones Coca-Cola",
         "currency": "AR$",
-        "price": 90,
+        "price": 900,
         "totalShares": 1000,
-        "quantityOwned": 200,
+        "quantityOwned": 800,
         "cotizationDate": "2024-18-04 22:37:00"
       },
       {
-        "name": "Apple",
+        "name": "Acciones Apple",
         "currency": "AR$",
-        "price": 90,
+        "price": 250,
         "totalShares": 1000,
-        "quantityOwned": 200,
+        "quantityOwned": 0,
         "cotizationDate": "2024-18-04 22:37:00"
       },
       {
-        "name": "A23",
+        "name": "Bonos A23",
         "currency": "AR$",
-        "price": 90,
+        "price": 400,
         "totalShares": 1000,
-        "quantityOwned": 200,
+        "quantityOwned": 0,
         "cotizationDate": "2024-18-04 22:37:00"
       },
       {
-        "name": "A40",
+        "name": "Bonos A40",
         "currency": "AR$",
-        "price": 90,
+        "price": 390,
         "totalShares": 1000,
-        "quantityOwned": 200,
+        "quantityOwned": 500,
         "cotizationDate": "2024-18-04 22:37:00"
       }
     ]
