@@ -32,17 +32,17 @@ export const buyShares = (shareName: string, amount: number) => {
 
   account.shares.forEach((share) => {
     if (share.name === shareName) {
-      if (share.availableShares < amount) {
-        throw new Error(
-          "No contamos con las suficientes acciones disponibles."
-        );
-      }
-
       const totalAmount = share.price * amount;
 
       if (totalAmount > savings) {
         throw new Error(
           "No contas con la cantidad de dinero suficiente para realizar esta operacion"
+        );
+      }
+
+      if (share.availableShares < amount) {
+        throw new Error(
+          "No contamos con las suficientes acciones disponibles."
         );
       }
 
