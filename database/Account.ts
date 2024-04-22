@@ -54,3 +54,31 @@ export const buyShares = (shareName: string, amount: number) => {
 
   saveToDatabase(clonedDB);
 };
+
+export const sellShares = (shareName: string, amount: number) => {
+  const clonedDB = readDB();
+  const account = clonedDB.savingsAccount;
+  const savings = account.cash[0].amount;
+  const shares = account.shares;
+  const share = shares.find((share) => share.name === shareName);
+
+  if (!share) {
+    throw new Error("Share not found");
+  }
+
+  account.shares.forEach((share) => {
+    if (share.name === shareName) {
+      if (amount > share.quantityOwned) {
+        throw new Error("No contas con las suficientes acciones disponibles.");
+      }
+
+      const totalAmount = share.price * amount;
+
+      account.cash[0].amount = savings + totalAmount;
+      share.quantityOwned = share.quantityOwned - amount;
+      share.availableShares = share.availableShares + amount;
+    }
+  });
+
+  saveToDatabase(clonedDB);
+};
