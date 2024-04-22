@@ -97,3 +97,13 @@ export const updateShareQuotation = (quotations: QuotationSharesPayload) => {
 
   saveToDatabase(clonedDB);
 };
+
+export const fullAmount = () => {
+  const savings = readDB().savingsAccount.cash[0].amount;
+  const shares = readDB().savingsAccount.shares;
+
+  shares.forEach((share) => {
+    const fullAmountMoneyAndShares =
+      share.price * share.quantityOwned + savings;
+  });
+};

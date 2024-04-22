@@ -9,6 +9,31 @@ Es posible:
 - Vender nuestras acciones o bonos
 - Comprar nuevas acciones o bonos
 
+## Instalación
+Esta app utiliza *nodemon* y *Remix* con lo cual podemos realizar cambios y se verán reflejados automáticamente.
+
+Para levantar el servidor correr en una pestaña de la terminal:
+```sh
+cd money-app-server
+```
+```sh
+npm i
+```
+```sh
+npx nodemon index.ts
+```
+
+Para levantar el cliente correr en otra pestaña de la terminal:
+```sh
+cd money-app
+```
+```sh
+npm i
+```
+```sh
+npm run dev
+```
+
 ## Endpoints
 
 Nombre | Metodo HTTP | Endpoint | Descripcion |
@@ -80,29 +105,4 @@ Nombre | Metodo HTTP | Endpoint | Descripcion |
 		}
 	]
 }
-```
-
-## Instalación
-Esta app utiliza *nodemon* y *Remix* con lo cual podemos realizar cambios y se verán reflejados automáticamente.
-
-Para levantar el servidor correr en una pestaña de la terminal:
-```sh
-cd money-app-server
-```
-```sh
-npm i
-```
-```sh
-npx nodemon index.ts
-```
-
-Para levantar el cliente correr en otra pestaña de la terminal:
-```sh
-cd money-app
-```
-```sh
-npm i
-```
-```sh
-npm run dev
 ```
