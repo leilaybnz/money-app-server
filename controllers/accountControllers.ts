@@ -5,6 +5,7 @@ import {
   getShareService,
   buySharesService,
   sellSharesService,
+  updateSharesQuotationsService,
 } from "../services/accountService";
 
 export const getSavingsController = (req: Request, res: Response) => {
@@ -139,6 +140,72 @@ export const sellSharesController = (req: Request, res: Response) => {
       });
     }
 
+    res
+      .status(error?.status || 500)
+      .send({ status: "FAILED", data: { error: error?.message || error } });
+  }
+};
+
+export const updateSharesQuotationsController = (
+  req: Request,
+  res: Response
+) => {
+  const quotations = req.body.quotations as unknown;
+
+  if (!quotations) {
+    return res.send(400).send({
+      status: "BAD_REQUEST",
+      data: { error: "Property 'quotations' must exist" },
+    });
+  }
+
+  if (!Array.isArray(quotations)) {
+    return res.send(400).send({
+      status: "BAD_REQUEST",
+      data: { error: "Property 'quotations' must be an array" },
+    });
+  }
+
+  (quotations as unknown[]).forEach((quotation) => {
+    if (
+      typeof quotation !== "object" ||
+      quotation === null ||
+      !("shareName" in quotation) ||
+      !("price" in quotation)
+    ) {
+      return res.send(400).send({
+        status: "BAD_REQUEST",
+        data: {
+          error:
+            "Each element of 'quotations' must be an object with shareName and price",
+        },
+      });
+    }
+
+    if (typeof quotation.shareName !== "string") {
+      return res.send(400).send({
+        status: "BAD_REQUEST",
+        data: {
+          error: "shareName must be a string",
+        },
+      });
+    }
+
+    if (typeof quotation.price !== "number") {
+      return res.send(400).send({
+        status: "BAD_REQUEST",
+        data: {
+          error: "price must be a number",
+        },
+      });
+    }
+  });
+
+  try {
+    updateSharesQuotationsService(quotations);
+
+    res.send({ status: "OK" });
+  } catch (error: any) {
     res
       .status(error?.status || 500)
       .send({ status: "FAILED", data: { error: error?.message || error } });
