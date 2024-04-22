@@ -1,38 +1,43 @@
 {
   "savingsAccount": {
-    "cash": [{ "currency": "AR$", "amount": 2000000 }],
+    "cash": [
+      {
+        "currency": "AR",
+        "amount": 1940520
+      }
+    ],
     "shares": [
       {
         "name": "Acciones Coca-Cola",
-        "currency": "AR$",
-        "price": 900,
-        "totalShares": 1000,
-        "quantityOwned": 800,
-        "cotizationDate": "2024-18-04 22:37:00"
+        "currency": "AR",
+        "price": 1100,
+        "availableShares": 945,
+        "quantityOwned": 855,
+        "quotationDate": "2024-04-21T23:26:55.538Z"
       },
       {
         "name": "Acciones Apple",
-        "currency": "AR$",
-        "price": 250,
-        "totalShares": 1000,
-        "quantityOwned": 0,
-        "cotizationDate": "2024-18-04 22:37:00"
+        "currency": "AR",
+        "price": 500,
+        "availableShares": 965,
+        "quantityOwned": 1,
+        "quotationDate": "2024-04-21T23:26:55.538Z"
       },
       {
         "name": "Bonos A23",
-        "currency": "AR$",
+        "currency": "AR",
         "price": 400,
-        "totalShares": 1000,
+        "availableShares": 1000,
         "quantityOwned": 0,
-        "cotizationDate": "2024-18-04 22:37:00"
+        "quotationDate": "2024-18-04 22:37:00"
       },
       {
         "name": "Bonos A40",
-        "currency": "AR$",
+        "currency": "AR",
         "price": 390,
-        "totalShares": 1000,
-        "quantityOwned": 500,
-        "cotizationDate": "2024-18-04 22:37:00"
+        "availableShares": 998,
+        "quantityOwned": 0,
+        "quotationDate": "2024-18-04 22:37:00"
       }
     ]
   }
