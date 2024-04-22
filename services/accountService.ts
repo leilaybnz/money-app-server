@@ -1,4 +1,9 @@
-import { getSavings, getAllShares, getShare } from "../database/Account";
+import {
+  getSavings,
+  getAllShares,
+  getShare,
+  buyShares,
+} from "../database/Account";
 
 export const getSavingsService = () => {
   const savings = getSavings();
@@ -13,4 +18,8 @@ export const getAllSharesService = () => {
 export const getShareService = (shareName: string) => {
   const share = getShare(shareName);
   return share;
+};
+
+export const buySharesService = (shareName: string, amount: number) => {
+  buyShares(shareName, amount);
 };
