@@ -3,6 +3,7 @@ import {
   getAllShares,
   getShare,
   buyShares,
+  sellShares,
 } from "../database/Account";
 
 export const getSavingsService = () => {
@@ -22,4 +23,8 @@ export const getShareService = (shareName: string) => {
 
 export const buySharesService = (shareName: string, amount: number) => {
   buyShares(shareName, amount);
+};
+
+export const sellSharesService = (shareName: string, amount: number) => {
+  sellShares(shareName, amount);
 };
