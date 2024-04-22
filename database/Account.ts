@@ -82,3 +82,18 @@ export const sellShares = (shareName: string, amount: number) => {
 
   saveToDatabase(clonedDB);
 };
+
+export const updateShareQuotation = (quotations: QuotationSharesPayload) => {
+  const clonedDB = readDB();
+  const shares = clonedDB.savingsAccount.shares;
+  quotations.forEach((quotation) => {
+    shares.forEach((share) => {
+      if (share.name === quotation.shareName) {
+        share.price = quotation.price;
+        share.quotationDate = new Date().toISOString();
+      }
+    });
+  });
+
+  saveToDatabase(clonedDB);
+};
