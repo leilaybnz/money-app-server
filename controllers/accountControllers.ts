@@ -6,6 +6,7 @@ import {
   buySharesService,
   sellSharesService,
   updateSharesQuotationsService,
+  getFullAmountService,
 } from "../services/accountService";
 
 export const getSavingsController = (req: Request, res: Response) => {
@@ -205,6 +206,17 @@ export const updateSharesQuotationsController = (
     updateSharesQuotationsService(quotations);
 
     res.send({ status: "OK" });
+  } catch (error: any) {
+    res
+      .status(error?.status || 500)
+      .send({ status: "FAILED", data: { error: error?.message || error } });
+  }
+};
+
+export const getFullAmountController = (req: Request, res: Response) => {
+  try {
+    const fullAmount = getFullAmountService();
+    res.send({ status: "OK", data: fullAmount });
   } catch (error: any) {
     res
       .status(error?.status || 500)

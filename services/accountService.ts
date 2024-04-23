@@ -5,6 +5,7 @@ import {
   buyShares,
   sellShares,
   updateShareQuotation,
+  getFullAmount,
 } from "../database/Account";
 import { QuotationSharesPayload } from "../types";
 
@@ -35,4 +36,9 @@ export const updateSharesQuotationsService = (
   quotations: QuotationSharesPayload
 ) => {
   updateShareQuotation(quotations);
+};
+
+export const getFullAmountService = () => {
+  const fullAmount = getFullAmount();
+  return fullAmount;
 };

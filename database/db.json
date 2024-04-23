@@ -3,7 +3,7 @@
     "cash": [
       {
         "currency": "AR",
-        "amount": 1940520
+        "amount": 2878820
       }
     ],
     "shares": [
@@ -11,8 +11,8 @@
         "name": "Acciones Coca-Cola",
         "currency": "AR",
         "price": 1100,
-        "availableShares": 945,
-        "quantityOwned": 855,
+        "availableShares": 1798,
+        "quantityOwned": 2,
         "quotationDate": "2024-04-21T23:26:55.538Z"
       },
       {
