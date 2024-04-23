@@ -19,6 +19,11 @@ Para levantar el servidor correr en una pestaña de la terminal:
 ```sh
 cd money-app-server
 ```
+> Crear archivo .env con la variable de entorno
+```sh
+touch .env
+```
+```BASE_URL="http://localhost:5000"```
 
 ```sh
 npm i
